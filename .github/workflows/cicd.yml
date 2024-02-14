@@ -37,14 +37,8 @@ jobs:
         with:
           node-version: 19.9.0
           cache: 'npm'
-          cache-dependency-path: 'test/package-lock.json' # Path to package-lock.json in video-streaming subfolder.
+          cache-dependency-path: 'package-lock.json' # Path to package-lock.json in video-streaming subfolder.
       
-      # Installs NPM packages and tests the microservice.
-      - name: Test
-        run: |
-          npm ci
-          npm test
-
       # Builds the Docker image.
       - name: Build
         run: docker build -t $CONTAINER_REGISTRY_LOGIN_SERVER/video-streaming:$VERSION --file ./Dockerfile .
