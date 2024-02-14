@@ -1,8 +1,15 @@
-FROM node:19.9.0-alpine
+FROM node:12
 
-WORKDIR /usr/src/app
+WORKDIR /src
+
 COPY package*.json ./
-RUN npm ci --omit=dev
-COPY ./src ./src
 
-CMD npm start
+RUN npm install
+
+COPY . . 
+
+ENV PORT=8080
+
+EXPOSE 8080
+
+CMD ["npm", "start"]
