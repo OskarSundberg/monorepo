@@ -1,5 +1,9 @@
 const express = require("express");
 const axios = require("axios");
+const env = require("dotenv");
+env.config({ path: "../../.env" });
+const { PORT } = process.env;
+
 const htmlContent = `
 <!DOCTYPE html>
 <html lang="en">
