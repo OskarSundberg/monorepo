@@ -8,7 +8,7 @@ const htmlContent = `
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Page</title>
 </head>
-<body>
+<body>gh
   <h1>Hello, World!</h1>
   <p>This is a sample HTML page served by Express.</p>
 </body>
@@ -23,7 +23,7 @@ async function startMicroservice(port) {
     const app = express();
 
     // Registers a HTTP GET route for test
-    app.get('/', (req, res) => {
+    app.get('/test', (req, res) => {
         res.send(htmlContent);
       });
 
