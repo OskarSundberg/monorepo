@@ -1,10 +1,10 @@
 FROM node:12
 
-WORKDIR /usr/src/app/test/src
+WORKDIR /usr/test/src
 COPY package.json ./
 
 RUN npm install
 
-COPY ./src ./src
+COPY . . 
 
 CMD npm start
