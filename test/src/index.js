@@ -1,5 +1,20 @@
 const express = require("express");
 const axios = require("axios");
+const htmlContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Page</title>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>This is a sample HTML page served by Express.</p>
+</body>
+</html>
+`;
+
 //
 // Starts the microservice.
 //
@@ -8,9 +23,9 @@ async function startMicroservice(port) {
     const app = express();
 
     // Registers a HTTP GET route for test
-    app.get("/test", async (req, res) => { // Route for streaming video.
-        console.log(`Hello World!`);
-    });
+    app.get('/', (req, res) => {
+        res.send(htmlContent);
+      });
 
     // Starts the HTTP server.
     app.listen(port, () => {
