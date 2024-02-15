@@ -18,20 +18,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: OskarTest123
+  name: oskartest123
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: OskarTest123
+      app: oskartest123
   template:
     metadata:
       labels:
-        app: OskarTest123
+        app: oskartest123
     spec:
       containers: 
-      - name: OskarTest123
-        image: $CONTAINER_REGISTRY_LOGIN_SERVER/OskarTest123:$VERSION
+      - name: oskartest123
+        image: $CONTAINER_REGISTRY_LOGIN_SERVER/oskartest123:$VERSION
         imagePullPolicy: IfNotPresent
         env:
         - name: PORT
@@ -47,10 +47,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: OskarTest123
+  name: oskartest123
 spec:
   selector:
-    app: OskarTest123
+    app: oskartest123
   type: LoadBalancer
   ports:
     - protocol: TCP
