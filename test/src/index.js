@@ -1,6 +1,6 @@
 const app = require('express')();
 
-app.get('/', (req, res ) => 
+app.get('/test', (req, res ) => 
     res.json({ message: 'Docker and azure is easy' }) 
 );
 
