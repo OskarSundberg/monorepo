@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 12
           cache: 'npm'
-          #cache-dependency-path: 'test/src/package-lock.json' # Path to package-lock.json in video-streaming subfolder.
+          cache-dependency-path: 'test/src' # Path to package-lock.json  subfolder.
       
       # Builds the Docker image.
       - name: Build
