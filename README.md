@@ -14,3 +14,6 @@ When you run my code:
 
 If you'd like to contribute to the project, feel free to fork the repository and submit a pull request. However, please keep in mind the disclaimer mentioned above.
 
+## Credits
+
+- **GPT-3 by OpenAI**: Acknowledging the assistance provided by the GPT-3 model from OpenAI for generating content, providing guidance, and answering questions.
