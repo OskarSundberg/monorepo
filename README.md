@@ -1,7 +1,4 @@
 # Disclaimer
-
-## Disclaimer
-
 When you run my code:
 
 "I take no responsibility for damages, crashes, 404s, blue screens, and more. It's like crossing a bridge made of spaghetti...good luck! Also, please note that I've borrowed code from other sources, and I claim no copyright on it."
